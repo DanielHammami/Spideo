@@ -1,0 +1,84 @@
+$green: #2BD277;
+$blue: #081C24;
+$white: #FFFFFF;
+
+
+.app {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    // Header
+    .header, .footer {
+        background-color: $blue;
+        color:$green;
+        font-weight: bold;
+        height: 100px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header {
+        font-size: 24px;
+        
+        h1 {
+            border: 4px solid $green;
+            border-radius: 7px;
+            padding: 10px 15px;
+        }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    // Presentation
+    .presentation-container {
+        display: flex;
+        justify-content: center;
+        padding: 40px 250px;
+        margin: 40px 0;
+        background-image: radial-gradient(circle at 20% 50%, rgba(3.14%, 14.51%, 40.39%, 0.98) 0%, rgba(3.14%, 14.51%, 40.39%, 0.88) 100%);
+        color: $white;
+
+        .presentation {
+            margin: 0 50px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            .synopsis_title {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 50px 0 20px 0;
+            }
+
+            .synopsis_detail {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .casting-container,
+    .similar-container {
+        margin-bottom: 40px; 
+
+        h1 {
+            font-size: 24px;
+            color: $blue;
+            margin-bottom: 20px; 
+        }
+    }
+
+    .similar-container {
+        margin-bottom: 150px; 
+        .poster {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
