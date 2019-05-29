@@ -21,9 +21,11 @@ class Recommended extends React.Component {
         .catch(error => error)
     }
 
-    deleteSimilar = (index) => {
-       let element = document.querySelector("." + index)
-       element.style.display = 'none';
+    deleteSimilarMovie = (index) => {
+        const filtredArray = this.state.result.filter(r => r.id !== index)
+        this.setState({
+            result: filtredArray
+        })
     }
 
     render(){
@@ -34,7 +36,7 @@ class Recommended extends React.Component {
                 <h1 className="other-movies">You might also like</h1>
                 <div className="poster">
                     {result.map(r => 
-                        <div key={r.id} onClick={() => this.deleteSimilar(r.id)} className={r.id}>
+                        <div key={r.id} onClick={() => this.deleteSimilarMovie(r.id)}>
                             <img src={images + r.poster_path} alt={r.original_title}/>
                             <p>{r.original_title}</p>
                         </div>)
